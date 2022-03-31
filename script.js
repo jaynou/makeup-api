@@ -1,12 +1,9 @@
 const searchBtn = document.getElementById("search-btn");
 const product = document.getElementById("product");
-const productDetails = document.getElementById("product-details");
-const productCloseBtn = document.getElementById("product-close-btn");
+
 
 searchBtn.addEventListener("click", getProductList);
-productCloseBtn.addEventListener("click", () => {
-  productDetailsContent.parentElement.classList.remove("showDetails");
-});
+
 
 // Get list of makeup products related to search
 function getProductList() {
@@ -25,7 +22,7 @@ function getProductList() {
         topItems.forEach((product) => {
           html += `
                     <div class = "product-item" data-id = "${product.category}">
-                        <div class = "meal-img">
+                        <div class = "product-img">
                             <img src = "${product.api_featured_image}" alt = "makeup">
                         </div>
                         <div class = "product-name">
