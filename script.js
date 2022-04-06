@@ -1,6 +1,15 @@
 const searchBtn = document.getElementById("search-btn");
 const product = document.getElementById("product");
 
+// Get the modal
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 searchBtn.addEventListener("click", getProductList);
 
